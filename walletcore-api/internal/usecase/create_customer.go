@@ -46,7 +46,7 @@ func (usecase *CreateCustomerUsecase) Execute(input CreateCustomerInputDTO) (*Cr
 	return &CreateCustomerOutputDTO{
 		ID:        entity.ID,
 		Name:      entity.Name,
-		Email:     entity.Name,
+		Email:     entity.Email,
 		CreatedAt: entity.CreatedAt,
 		UpdatedAt: entity.UpdatedAt,
 	}, nil
