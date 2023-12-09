@@ -27,12 +27,12 @@ func TestAddAccount(t *testing.T) {
 func TestUpdateCustomer(t *testing.T) {
 	customer, _ := entity.NewCustomer("Romeo", "romeo@icloud.com")
 
-	err := customer.Update("Romeo Montague", "romeu.montague.1597@icloud.com")
+	err := customer.Update("Romeo Montague", "romeo.montague.1597@icloud.com")
 
 	assert.Nil(t, err)
 
 	assert.Equal(t, "Romeo Montague", customer.Name)
-	assert.Equal(t, "romeu.montague.1597@icloud.com", customer.Email)
+	assert.Equal(t, "romeo.montague.1597@icloud.com", customer.Email)
 
 	assert.NotEqual(t, customer.CreatedAt, customer.UpdatedAt)
 }
